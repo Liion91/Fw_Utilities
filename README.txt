@@ -1,0 +1,1 @@
+node updateDate.js --max-old-space-size=3000
