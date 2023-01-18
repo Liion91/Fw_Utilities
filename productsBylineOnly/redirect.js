@@ -1,4 +1,4 @@
-const base = "url";
+const base = "url/macchinari?searchKeyword=";
 let jsonFile = require("./prods_filtered_prod.json");
 let fs = require("fs");
 
