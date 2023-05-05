@@ -2,15 +2,17 @@ var fs = require("fs");
 
 function getProducts() {
   try {
-    let date = "2023-01-16";
-    const products = JSON.parse(fs.readFileSync("prod_Ok_Prod.json"));
+    let date = "2023-05-04";
+    // const products = JSON.parse(fs.readFileSync("prod_Ok_Prod.json"));
+    const products = JSON.parse(fs.readFileSync("abstract_product.json"));
     console.log(products.length);
 
     const filtered = filterProducts(products, date);
 
     const codes = filtered.map((prod) => prod.product_code);
 
-    fs.writeFileSync("prods_" + date + ".json", JSON.stringify(codes));
+    // fs.writeFileSync("prods_" + date + ".json", JSON.stringify(codes));
+    fs.writeFileSync("prods_" + date + ".json", JSON.stringify(filtered));
 
     console.log(filtered.length);
     process.exit();
